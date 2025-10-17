@@ -1,0 +1,28 @@
+[
+
+  {
+    "id":"1",
+    "name": "Zapatillas",
+    "price": 50000,
+    "category": "ropa",
+    "description": "Zapatillas deportivas",
+    "imageUrl": "/imagenes/zapatilla.jpeg"
+  },
+ {
+    "id":"2",
+    "name": "Campera",
+    "price": 50000,
+    "category": "ropa",
+    "description": "Campera deportivas",
+    "imageUrl": "/imagenes/campera.jpeg"
+  },
+ {
+    "id":"3",
+    "name": "Pantalon",
+    "price": 50000,
+    "category": "ropa",
+    "description": "Pantalon deportivas",
+    "imageUrl": "/imagenes/pantalon.jpeg"
+  }
+  
+]
