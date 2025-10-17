@@ -23,11 +23,11 @@
 .product-item a {
   text-decoration: none;
   color: inherit;
-  display: block; /*hacemos que el link tome todo el bloque del article y sea clickeable*/
+  display: block; 
 }
 
 .product-item p {
-  margin: 0.375rem 0; /* 6px */
+  margin: 0.375rem 0;
 }
 
 .product-title {
