@@ -10,25 +10,41 @@ export const CartProvider = ({ children }) => {
     }
 
     const addItem = (item) => {
-        if (exists(item.id)){
-            alert('El producto ya esta en el carrito')
-
-            return;
+        if (exists(item.id)) {
+            const updateCard = cart.map((prod) => {
+                if (prod.id === item.id) {
+                    return { ...prod, quantity: prod.quantity + item.quantity }
+                } else {
+                    return prod
+                }
+            })
+            setCart(updateCard)
+            alert(`Agregado al carrito.`)
+        } else {
+            setCart([...cart, item])
+            alert(`${item.name} agregado.`)
         }
-        setCart([...cart, item])
-        alert(`${item.name} agregado.`)
-
+     }
+     const deleteItem = (id) => {
+        const filteredCart = cart.filter((prod) => prod.id !== id)
+        setCart(filteredCart)
+        alert("Producto eliminado del carrito.")
     }
 
-     const cleartCart = () => {
+    const cleartCart = () => {
         setCart([])
-     }
+    }
 
-     const getTotalItems = () => {
-        if (cart.length){
-            return cart.length;
-        }
-     }
+    const getTotalItems = () => {
+        const getTotalItems = cart.reduce((acc, item) => acc + item.quantity, 0)
+        return getTotalItems
+    }
+    const calcularTotal = () => {
+        const total =  cart.reduce((acc,p) =>acc + p.price * p.quantity, 0 )
 
-    return <CartContext.Provider  value={{ cart, addItem, cleartCart,getTotalItems }}>{children}</CartContext.Provider>
+        return Math.round( total * 100 ) / 100
+    }
+
+    const value = { cart, addItem, cleartCart, getTotalItems, deleteItem,calcularTotal }
+    return <CartContext.Provider value={value}>{children}</CartContext.Provider>
 }

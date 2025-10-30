@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom"
 export const ItemDetailConteiner = () => {
     const [detail, setDetail] = useState({})
     const { id } = useParams()
+    console.log(id,'id')
     useEffect(() => {
         fetch('/data/products.json').then((res) => {
             if (!res.ok) {
