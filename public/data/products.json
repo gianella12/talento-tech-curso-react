@@ -5,7 +5,7 @@
     "name": "Zapatillas",
     "price": 50000,
     "category": "ropa",
-    "description": "Zapatillas deportivas",
+    "description": "Zapatillas urbanas con suela antideslizante y diseño moderno. Brindan confort y estabilidad para uso diario o entrenamientos.",
     "imageUrl": "/imagenes/zapatilla.jpeg"
   },
  {
@@ -13,7 +13,7 @@
     "name": "Campera",
     "price": 50000,
     "category": "ropa",
-    "description": "Campera deportivas",
+    "description": "Campera deportiva liviana con cierre frontal y capucha ajustable. Perfecta para entrenar o salir en días frescos con estilo y comodidad.",
     "imageUrl": "/imagenes/campera.jpeg"
   },
  {
@@ -21,8 +21,25 @@
     "name": "Pantalon",
     "price": 50000,
     "category": "ropa",
-    "description": "Pantalon deportivas",
+    "description": "Pantalón deportivo de tela liviana y elástica con cintura ajustable. Ideal para moverse libremente y mantener comodidad todo el día.",
     "imageUrl": "/imagenes/pantalon.jpeg"
+  },
+  {
+    "id":"4",
+    "name": "Lavarropas",
+    "price": 150000,
+    "category": "electrodomesticos",
+    "description": "Lavadora moderna de carga frontal con pantalla digital y diseño plateado elegante. Ideal para hogares que buscan eficiencia y estilo.",
+    "imageUrl": "/imagenes/lavarropas.jpeg"
+  },
+  {
+    "id":"5",
+    "name": "Heladera",
+    "price": 170000,
+    "category": "electrodomesticos",
+    "description": "Refrigerador de acero inoxidable con doble puerta y dispensador de agua integrado. Combina gran capacidad con un diseño moderno y elegante.",
+    "imageUrl": "/imagenes/heladera.jpeg"
   }
+
   
 ]

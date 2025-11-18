@@ -1,7 +1,11 @@
 import { Nav } from "../Nav/Nav.jsx"
+import { Link } from 'react-router-dom'
 export const Header = () => {
-    return <header>
-        <h2>LOGO</h2>
-        <Nav/>
-    </header>
+    return (
+        <>
+            <header>
+                <Link to='/'>LOGO</Link>
+                <Nav />
+            </header>
+        </>)
 } 
