@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { ItemList } from "../ItemLists/ItemList"
 import { useParams } from "react-router-dom"
+import { getProducts } from "../../services/products"
 
 export const ItemListConteiner = ({ title }) => {
     const [products, setProducts] = useState([])
@@ -8,19 +9,11 @@ export const ItemListConteiner = ({ title }) => {
 
 
     useEffect(() => {
-        fetch("https://6913ad77f34a2ff1170cd90e.mockapi.io/products").then((res) => {
-            if (!res.ok) {
-                throw new Error("Hubo un problema al buscar productos.")
-            }
-            return res.json();
-        }
-        ).then((data) => {
-            if(category){
-                setProducts(data.filter( prod => prod.category === category))
-            }else{
-                 setProducts(data)
-            }
-        }).catch((err) => {
+       getProducts(category)
+        .then((data) => {
+            setProducts(data)
+        })
+        .catch((err) => {
             console.log(err)
         });
     }, [category])
